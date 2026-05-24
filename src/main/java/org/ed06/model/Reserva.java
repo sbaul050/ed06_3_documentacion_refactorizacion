@@ -3,12 +3,12 @@ package org.ed06.model;
 import java.time.LocalDate;
 
 public class Reserva {
-    private int id;
-    private Habitacion habitacion;
-    private Cliente cliente;
-    private LocalDate fechaInicio;
-    private LocalDate fechaFin;
-    private double precioTotal;
+    private final int id;
+    private final Habitacion habitacion;
+    private final Cliente cliente;
+    private final LocalDate fechaInicio;
+    private final LocalDate fechaFin;
+    private final double precioTotal;
     private final double Vip = 0.9;
     private final double mas7Dias = 0.95;
 
