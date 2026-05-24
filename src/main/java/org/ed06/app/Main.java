@@ -125,9 +125,11 @@ public class Main {
         System.out.println("Introduce el tipo de habitación (SIMPLE, DOBLE, SUITE, LITERA): ");
         tipoHabitacion = scanner.next();
 
-        LocalDate fechaEntrada = getFechaEntrada();
+        System.out.println("Fecha Entrada: ");
+        LocalDate fechaEntrada = getFecha();
 
-        LocalDate fechaSalida = getFechaSalida();
+        System.out.println("Fecha Salida: ");
+        LocalDate fechaSalida = getFecha();
 
         numeroHabitacion = hotel.reservarHabitacion(clienteId, tipoHabitacion, fechaEntrada,
                 fechaSalida);
@@ -142,38 +144,21 @@ public class Main {
         }
     }
 
-    private static LocalDate getFechaEntrada() {
-        int mes;
-        int anio;
-        int dia;
-        System.out.println("Introduce la fecha de entrada (año): ");
-        anio = scanner.nextInt();
-
-        System.out.println("Introduce la fecha de entrada (mes): ");
-        mes = scanner.nextInt();
-
-        System.out.println("Introduce la fecha de entrada (día): ");
-        dia = scanner.nextInt();
-
-        LocalDate fechaEntrada = LocalDate.of(anio, mes, dia);
-        return fechaEntrada;
-    }
-
-    private static LocalDate getFechaSalida() {
+    private static LocalDate getFecha() {
         int anio;
         int mes;
         int dia;
-        System.out.println("Introduce la fecha de salida (año): ");
+        System.out.println("Introduce el año: ");
         anio = scanner.nextInt();
 
-        System.out.println("Introduce la fecha de salida (mes): ");
+        System.out.println("Introduce el mes: ");
         mes = scanner.nextInt();
 
-        System.out.println("Introduce la fecha de salida (día): ");
+        System.out.println("Introduce el día: ");
         dia = scanner.nextInt();
 
-        LocalDate fechaSalida = LocalDate.of(anio, mes, dia);
-        return fechaSalida;
+        LocalDate fecha = LocalDate.of(anio, mes, dia);
+        return fecha;
     }
 
     public static void registrarClientee(Hotel hotel){
