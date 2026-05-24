@@ -6,6 +6,7 @@ public class Cliente {
     public String dni;
     public String email;
     public boolean esVip;
+    public int numReservas;
 
     public Cliente(int id, String nombre, String dni, String email, boolean esVip) {
         this.id = id;
@@ -43,4 +44,7 @@ public class Cliente {
         return true;
     }
 
+    public void nuevaReserva(){
+        numReservas++;
+    }
 }

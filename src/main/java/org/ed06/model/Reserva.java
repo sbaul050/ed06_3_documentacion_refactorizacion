@@ -1,7 +1,6 @@
 package org.ed06.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Reserva {
     private int id;
@@ -10,6 +9,8 @@ public class Reserva {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private double precioTotal;
+    private final double Vip = 0.9;
+    private final double mas7Dias = 0.95;
 
     public Reserva(int id, Habitacion habitacion, Cliente cliente, LocalDate fechaInicio, LocalDate fechaFin) {
         this.id = id;
@@ -56,12 +57,12 @@ public class Reserva {
 
         // Si el cliente es VIP, aplicamos un descuento del 10%
         if (cliente.esVip) {
-            pf *= 0.9;
+            pf *= Vip;
         }
 
         // Si el intervalo de fechas es mayor a 7 días, aplicamos un descuento adicional del 5%
         if (n > 7) {
-            pf *= 0.95;
+            pf *= mas7Dias;
         }
 
         // Devolvemos el precio final

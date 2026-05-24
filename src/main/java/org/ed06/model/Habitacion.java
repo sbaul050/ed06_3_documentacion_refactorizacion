@@ -2,7 +2,7 @@ package org.ed06.model;
 
 public class Habitacion {
     private int numero;
-    private String tipo; // "SIMPLE", "DOBLE", "SUITE"
+    private String tipo; // "SIMPLE", "DOBLE", "SUITE", "LITERAS"
     private double precioBase;
 
     //Todo pendiente cambiar la forma de gestionar la disponibilidad en base a las fechas de las reservas
